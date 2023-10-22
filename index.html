@@ -1,0 +1,119 @@
+<!doctype html>
+ 
+<html>
+	<head>
+		<title>Halloween Defense</title>
+		<link href="images/pumpkin.ico" rel="shortcut icon">
+		<link rel="stylesheet" type="text/css" href="css/halloween.css">
+        <script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.game.js"></script>
+		<script type="text/javascript" src="js/character.home.js"></script>
+		<script type="text/javascript" src="js/character.start.js"></script>
+	
+		<style>
+			#icon{
+				position: absolute;
+				width: 50px;
+				cursor: pointer;
+				opacity: .5;
+				transition: all linear .2s;
+				z-index: 999;
+				top: 555px;
+				left: 740px;
+			}
+			#icon:hover{
+				opacity: 1;
+			}
+		</style>
+	</head>
+
+	<body style="overflow:hidden">
+		
+		<img src="music/pause.png" id="icon">
+		
+		<!-- home menu -->
+		<div id="home">
+			<div id="star" class="1" onclick="audio.play();"></div>
+			<div id="star2" class="2" onclick="audio.play();"></div>
+		</div>
+		<!-- level window -->
+		<div id="levelWin" style="display: none;">
+			<div class="level_1" onclick="audio.play();" style="display: none;"><div class="iss"><span class="levelnum">LEVEL 1</span></div></div>
+			<div class="level_2" onclick="audio.play();" style="display: none;"><div class="iss"><span class="levelnum">LEVEL 2</span></div></div>
+			<div class="level_3" onclick="audio.play();" style="display: none;"><div class="iss"><span class="levelnum">LEVEL 3</span></div></div>
+		</div>
+		<!-- here starts character game! -->
+		<div id="startGame" style="display: none;">
+			<div id="container"></div>
+			<!-- nums and exit button -->
+			<div id="related" style="display: none;">
+				<div id="nums">
+					<div class="rt"></div>
+					<div class="gt"></div>
+					<div class="yt"></div>
+					<div class="bt"></div>
+				</div>
+				<div id="score">
+					<div id="lifenum1"></div>
+					<div id="score1"></div>
+					<div id="lifenum2"></div>
+					<div id="score2"></div>
+				</div>
+				<div id="round"></div>
+				<!-- info menu on click or 'esc' -->
+				<div id="gameMenu">
+					<div id="goHome" onclick="audio.play();"></div>
+					<div id="info" style="display: none;">
+						<div id="goMenu" onclick="audio.play();"><div class="select"></div></div>
+						<div id="continue" onclick="audio.play();"><div class="select"></div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- game over -->
+		<div id="gameover" style="display: none;">
+			<div id="wOrl"></div>
+			<div id="p1Score">
+				<div id="tp1r"></div>
+				<div id="tp1g"></div>
+				<div id="tp1y"></div>
+				<div id="tp1b"></div>
+			</div>
+			<div id="p2Score">
+				<div id="tp2r"></div>
+				<div id="tp2g"></div>
+				<div id="tp2y"></div>
+				<div id="tp2b"></div>
+			</div>
+			<div id="p1Ttl"></div>
+			<div id="p2Ttl"></div>
+			<div id="anyKey"></div>
+		</div>
+
+		<!-- game music -->
+		<audio id="myMusic" loop="loop">
+			<source src="music/bgmusic.mp3" type="audio/mp3">
+		</audio>
+		
+		<script>
+			var myMusic = document.getElementById("myMusic");
+			var icon = document.getElementById("icon");
+			
+			const audio = new Audio();
+			audio.src="music/btn_click.mp3";
+	
+			icon.onclick=function(){
+				audio.play();
+				if(myMusic.paused){
+					myMusic.play();
+					icon.src="music/play.png";
+				}else{
+					myMusic.pause();
+					icon.src="music/pause.png";
+				}
+			}
+
+		</script>
+		
+	</body>
+</html>

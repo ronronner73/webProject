@@ -1,0 +1,205 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: black;
+}
+#home, #container, #levelWin, #gameover {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	margin: 8px 0 0 8px;
+	width: 800px; 
+	height: 600px;
+	overflow: hidden;
+}
+#home {
+	background: url(../images/homewin/about.png) no-repeat;
+}
+#levelWin {
+	background: url(../images/levelWin/bgpic.png) no-repeat;
+}
+#gameover {
+	background: url(../images/gameover.png) no-repeat;
+}
+#star, #star2, .level_1, .level_2, .level_3, .rt, .gt, .yt, .bt, #goHome, #info, #right, .roadblock, .born, #lifenum1, #lifenum2, #score1, #score2, #round, #wOrl, #tp1r, #tp1g, #tp1y, #tp1b, #tp2r, #tp2g, #tp2y, #tp2b, #p1Ttl, #p2Ttl, #anyKey {
+	position: absolute;
+}
+#star {
+	background: url(../images/homewin/star.png) 0% 50% no-repeat;
+	height: 43px;
+	width: 101px;
+	top: 300px;
+	left: 360px;
+}
+#star2 {
+	background: url(../images/homewin/star2.png) 0% 50% no-repeat;
+	height: 43px;
+	width: 109px;
+	top: 300px;
+	left: 480px;
+}
+.level_1, .level_2, .level_3 {
+	background: url(../images/levelWin/btn.png) 0% 50% no-repeat;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 700;
+	color: white;
+	height: 38px;
+	width: 129px;
+}
+.level_1 {
+	top: 180px;
+	left: 335px;
+}
+.level_2 {
+	top: 240px;
+	left: 335px;
+}
+.level_3 {
+	top: 300px;
+	left: 335px;
+}
+.iss {
+	height: 39px;
+}
+.levelnum {
+	position: relative;
+	top: 10px;
+}
+#goHome {
+	background: url(../images/exit.png) 0% 50% no-repeat;
+	height: 98px;
+	width: 96px;
+	top: 0px;
+	left: 708px;
+}
+#info {
+	background: url(../images/info/bgpic.png) no-repeat;
+	height: 161px;
+	width: 194px;
+	top: 200px;
+	left: 250px;
+	z-index: 12;
+}
+#goMenu, #continue {
+	position: relative;
+	height: 30px;
+	width: 133px;
+	left: 32px;
+	z-index: 13;
+}
+#goMenu {
+	background: url(../images/info/gomenu.png) no-repeat;
+	top: 53px;
+}
+#continue {
+	background: url(../images/info/continue.png) no-repeat;
+	top: 63px;
+}
+
+.born {
+	height: 50px;
+	width: 34px;
+	z-index: 1;
+}
+.rt, .gt, .yt, .bt {
+	left: 750px;
+}
+.rt {
+	top: 150px;
+}
+.gt {
+	top: 202px;
+}
+.yt {
+	top: 254px;
+}
+.bt {
+	top: 306px;
+}
+#lifenum1 {
+	top: 565px;
+	left: 190px;
+}
+#lifenum2 {
+	top: 565px;
+	left: 520px;
+}
+#score1 {
+	top: 565px;
+	left: 260px;
+}
+#score2 {
+	top: 565px;
+	left: 590px;
+}
+#round {
+	top: 354px;
+	left: 777px;
+}
+.setBlock {
+	height: 60px;
+}
+.roadblock {
+	height: 50px;
+	width: 36px;
+	z-index: 1;
+}
+#wOrl {
+	background: url(../images/fail.png);
+	height: 30px;
+	width: 117px;
+	top: 12px;
+	left: 235px;
+}
+#tp1r {
+	top: 115px;
+	left: 110px;
+}
+#tp1g {
+	top: 165px;
+	left: 110px;
+}
+#tp1y {
+	top: 115px;
+	left: 212px;
+}
+#tp1b {
+	top: 165px;
+	left: 212px;
+}
+#tp2r {
+	top: 115px;
+	left: 365px;
+}
+#tp2g {
+	top: 165px;
+	left: 365px;
+}
+#tp2y {
+	top: 115px;
+	left: 465px;
+}
+#tp2b {
+	top: 165px;
+	left: 465px;
+}
+#p1Ttl {
+	top: 245px;
+	left: 82px;
+}
+#p2Ttl {
+	top: 245px;
+	left: 335px;
+}
+#anyKey {
+	height: 22px;
+	width: 132px;
+	top: 562px;
+	left: 350px;
+}
+.presscontinue {
+	background: url(../images/presscontinue.png) no-repeat;
+}
